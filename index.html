@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inicio — estudio de biomateriales</title>
-<meta name="description" content="Lámparas y cuadros hechos con impresión 3D, micelio, biofilm y fieltro. Diseño con biomateriales en Barcelona.">
+<meta name="description" content="Lámparas y cuadros hechos con impresión 3D, micelio y fieltro. Diseño con biomateriales en Barcelona.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Inter+Tight:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
@@ -38,7 +38,7 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 <div style="display: flex; flex-direction: column; gap: 28px">
 <p style="margin: 0; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #55574F">Diseño con biomateriales · Barcelona</p>
 <h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 64px; line-height: 1.04; letter-spacing: -0.02em">Objetos, luz y arte cultivados con materiales vivos.</h1>
-<p style="margin: 0; max-width: 520px; font-size: 18px; color: #3A3C35">Lámparas y cuadros hechos con impresión 3D, micelio, biofilm y fieltro. Cada pieza nace de una investigación sobre su material.</p>
+<p style="margin: 0; max-width: 520px; font-size: 18px; color: #3A3C35">Lámparas y cuadros hechos con impresión 3D, micelio y fieltro. Cada pieza nace de una investigación sobre su material.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
 <a href="#tienda" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: #1B1C18; color: #EEEEE8; text-decoration: none; font-weight: 500; font-size: 15px">Ver lámparas</a>
 <a href="#colaborar" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #1B1C18; text-decoration: none; font-weight: 500; font-size: 15px">Colaborar conmigo</a>
@@ -56,16 +56,15 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </div>
 <a href="producto.html" style="font-size: 14px">Ver toda la tienda →</a>
 </div>
-<nav aria-label="Filtrar por material" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: -12px">
-<a href="#tienda" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; background: #1B1C18; color: #EEEEE8; text-decoration: none; font-size: 14px">Todas</a>
-<a href="#tienda" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #C9CABF; text-decoration: none; font-size: 14px">Impresión 3D</a>
-<a href="#tienda" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #C9CABF; text-decoration: none; font-size: 14px">Micelio</a>
-<a href="#tienda" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #C9CABF; text-decoration: none; font-size: 14px">Biofilm</a>
-<a href="#tienda" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #C9CABF; text-decoration: none; font-size: 14px">Fieltro</a>
-</nav>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px">
+<div role="group" aria-label="Filtrar por material" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: -12px">
+<button type="button" data-filter="todas" aria-pressed="true" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #C9CABF; background: transparent; color: #1B1C18; font: 14px Inter, sans-serif; cursor: pointer">Todas</button>
+<button type="button" data-filter="3d" aria-pressed="false" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #C9CABF; background: transparent; color: #1B1C18; font: 14px Inter, sans-serif; cursor: pointer">Impresión 3D</button>
+<button type="button" data-filter="micelio" aria-pressed="false" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #C9CABF; background: transparent; color: #1B1C18; font: 14px Inter, sans-serif; cursor: pointer">Micelio</button>
+<button type="button" data-filter="fieltro" aria-pressed="false" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #C9CABF; background: transparent; color: #1B1C18; font: 14px Inter, sans-serif; cursor: pointer">Fieltro</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 28px">
 
-<a href="producto.html" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
+<a href="producto.html" data-material="3d" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
 <img src="fotos/ocaso-frontal.jpg" alt="Lámpara Ocaso encendida" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; background: #1B1C18">
 <div style="display: flex; justify-content: space-between; gap: 12px">
 <div style="display: flex; flex-direction: column; gap: 2px">
@@ -76,7 +75,7 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </div>
 </a>
 
-<a href="producto.html" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
+<a href="producto.html" data-material="micelio" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
 <div style="aspect-ratio: 4 / 5; background: #D9DAD1; display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box; font-size: 13px; color: #55574F">[Foto: lámpara de micelio]</div>
 <div style="display: flex; justify-content: space-between; gap: 12px">
 <div style="display: flex; flex-direction: column; gap: 2px">
@@ -87,18 +86,8 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </div>
 </a>
 
-<a href="producto.html" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
-<div style="aspect-ratio: 4 / 5; background: #D9DAD1; display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box; font-size: 13px; color: #55574F">[Foto: lámpara con pantalla de biofilm]</div>
-<div style="display: flex; justify-content: space-between; gap: 12px">
-<div style="display: flex; flex-direction: column; gap: 2px">
-<span style="font-weight: 500">[Nombre] — biofilm</span>
-<span style="font-size: 14px; color: #55574F">Pantalla de biofilm</span>
-</div>
-<span style="font-size: 15px">[PRECIO]</span>
-</div>
-</a>
 
-<a href="producto.html" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
+<a href="producto.html" data-material="fieltro" style="display: flex; flex-direction: column; gap: 14px; text-decoration: none">
 <img src="fotos/grifo.jpg" alt="Lámpara Grifo de fieltro encendida: un grifo rojo recortado sobre fondo azul oscuro" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; display: block; background: #17131B">
 <div style="display: flex; justify-content: space-between; gap: 12px">
 <div style="display: flex; flex-direction: column; gap: 2px">
@@ -233,5 +222,27 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </footer>
 
 </div>
+<script>
+(function () {
+  var buttons = document.querySelectorAll('[data-filter]');
+  var cards = document.querySelectorAll('[data-material]');
+  function apply(key) {
+    buttons.forEach(function (b) {
+      var on = b.getAttribute('data-filter') === key;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.style.background = on ? '#1B1C18' : 'transparent';
+      b.style.color = on ? '#EEEEE8' : '#1B1C18';
+      b.style.borderColor = on ? '#1B1C18' : '#C9CABF';
+    });
+    cards.forEach(function (c) {
+      c.style.display = (key === 'todas' || c.getAttribute('data-material') === key) ? 'flex' : 'none';
+    });
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-filter')); });
+  });
+  apply('todas');
+})();
+</script>
 </body>
 </html>
