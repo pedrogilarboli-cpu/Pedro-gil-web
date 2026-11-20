@@ -1,3 +1,14 @@
 {
-  "redirects": [{ "source": "/producto.html", "destination": "/ocaso.html", "permanent": true }]
+  "redirects": [
+    {
+      "source": "/producto.html",
+      "destination": "/ocaso.html",
+      "permanent": true
+    },
+    {
+      "source": "/micelio.html",
+      "destination": "/nefertiti.html",
+      "permanent": true
+    }
+  ]
 }
