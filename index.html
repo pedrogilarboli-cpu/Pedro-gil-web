@@ -19,7 +19,8 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
   header nav a { padding: 8px 0; }
   h1:not(.wordmark) { font-size: 40px !important; }
   section > div, header, footer { padding-left: 20px !important; padding-right: 20px !important; }
-  .hero-full header { padding-top: 14px !important; }
+  .hero-full header { padding-top: 18px !important; gap: 14px !important; }
+  .wordmark { font-size: 30px !important; }
   .hero-photo { left: 0 !important; transform: none !important; width: 100% !important; object-fit: cover; object-position: 50% 40%; -webkit-mask-image: none !important; mask-image: none !important; }
 }
 @media (max-width: 370px) { header nav { font-size: 14px !important; } }
@@ -31,7 +32,8 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 <section class="hero-full" style="position: relative; height: 100vh; height: 100svh; min-height: 560px; overflow: hidden; background: linear-gradient(to bottom, #1C1C25 0%, #211518 55%, #352321 100%)">
 <img class="hero-photo" src="fotos/ocaso-colgada.jpg" alt="Lámpara Ocaso encendida, colgada del techo" width="1200" height="1600" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; width: auto; max-width: none; display: block; -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%)">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 58%, rgba(0,0,0,0.5) 100%)"></div>
-<header class="on-dark" style="position: absolute; top: 0; left: 0; right: 0; max-width: 1280px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 16px">
+<header class="on-dark" style="position: absolute; top: 0; left: 0; right: 0; max-width: 1280px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
+<h1 class="wordmark" style="margin: 0; font-family: Unbounded, 'Inter Tight', sans-serif; font-weight: 500; font-size: 40px; line-height: 1; letter-spacing: 0.04em"><a href="index.html" style="text-decoration: none">BORELA</a></h1>
 <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 14px">
 <a href="#tienda" style="text-decoration: none">Tienda</a>
 <a href="#obra" style="text-decoration: none">Obra</a>
@@ -40,12 +42,14 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 <a href="#colaborar" style="text-decoration: none; font-weight: 500; border-bottom: 1px solid #FFFFFF">Colaborar</a>
 </nav>
 </header>
-<h1 class="wordmark" style="position: absolute; left: 0; right: 0; bottom: 9vh; margin: 0; text-align: center; color: #FFFFFF; font-family: Unbounded, 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(64px, 15vw, 210px); line-height: 1; letter-spacing: 0.04em; text-shadow: 0 2px 30px rgba(0,0,0,0.25)">BORELA</h1>
 </section>
 
 <section id="historia">
 <div style="max-width: 1280px; margin: 0 auto; padding: 96px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: center">
-<div role="img" aria-label="Espacio para foto" style="aspect-ratio: 4 / 5; background: #D9DAD1; display: flex; align-items: flex-end; padding: 20px; box-sizing: border-box; font-size: 13px; color: #55574F">[Foto: tú en el taller o trabajando una pieza]</div>
+<div role="img" aria-label="Espacio para vídeo" style="aspect-ratio: 4 / 5; background: #D9DAD1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 20px; box-sizing: border-box; font-size: 13px; color: #55574F">
+<svg aria-hidden="true" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#55574F" stroke-width="1.5"><circle cx="32" cy="32" r="30"/><path d="M26 21 L45 32 L26 43 Z"/></svg>
+<span>[Vídeo: tú trabajando en el taller]</span>
+</div>
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 520px">
 <p style="margin: 0; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #55574F">Mi historia</p>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 40px; line-height: 1.1; letter-spacing: -0.01em">[Título de tu historia]</h2>
