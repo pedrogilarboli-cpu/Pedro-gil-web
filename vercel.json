@@ -9,6 +9,11 @@
       "source": "/micelio.html",
       "destination": "/nefertiti.html",
       "permanent": true
+    },
+    {
+      "source": "/grifo.html",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }
