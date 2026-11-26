@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inicio — estudio de biomateriales</title>
+<title>Borela — diseño con biomateriales, Barcelona</title>
 <meta name="description" content="Lámparas y cuadros hechos con impresión 3D, micelio y fieltro. Diseño con biomateriales en Barcelona.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Inter+Tight:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Inter+Tight:wght@400;500;600&amp;family=Unbounded:wght@500&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0}
 a{color:#1B1C18}a:hover{color:#4F5D3A}
+.on-dark a{color:#FFFFFF}.on-dark a:hover{color:#E9E2D0}
 </style>
 <style>
 @media (max-width: 640px) {
   header { padding-top: 16px !important; padding-bottom: 14px !important; gap: 10px !important; }
   header nav { flex-wrap: nowrap !important; gap: 12px !important; justify-content: space-between; width: 100%; overflow-x: auto; white-space: nowrap; font-size: 15px !important; }
   header nav a { padding: 8px 0; }
-  h1 { font-size: 40px !important; }
+  h1:not(.wordmark) { font-size: 40px !important; }
   section > div, header, footer { padding-left: 20px !important; padding-right: 20px !important; }
-  .hero { padding: 0 20px 64px !important; gap: 32px !important; }
-  .hero-img { order: -1; height: 72vh !important; min-height: 420px; max-height: 640px; width: calc(100% + 40px) !important; margin: 0 -20px; }
-  .hero > div { padding-left: 0 !important; padding-right: 0 !important; }
+  .hero-full header { padding-top: 14px !important; }
+  .hero-photo { left: 0 !important; transform: none !important; width: 100% !important; object-fit: cover; object-position: 50% 40%; -webkit-mask-image: none !important; mask-image: none !important; }
 }
 @media (max-width: 370px) { header nav { font-size: 14px !important; } }
 </style>
@@ -28,28 +28,31 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 <body>
 <div style="background: #EEEEE8; color: #1B1C18; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
 
-<header style="max-width: 1280px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
-<a href="#" style="font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 18px; letter-spacing: 0.02em; text-decoration: none">PEDRO GIL</a>
+<section class="hero-full" style="position: relative; height: 100vh; height: 100svh; min-height: 560px; overflow: hidden; background: linear-gradient(to bottom, #1C1C25 0%, #211518 55%, #352321 100%)">
+<img class="hero-photo" src="fotos/ocaso-colgada.jpg" alt="Lámpara Ocaso encendida, colgada del techo" width="1200" height="1600" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; width: auto; max-width: none; display: block; -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 58%, rgba(0,0,0,0.5) 100%)"></div>
+<header class="on-dark" style="position: absolute; top: 0; left: 0; right: 0; max-width: 1280px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 16px">
 <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 14px">
 <a href="#tienda" style="text-decoration: none">Tienda</a>
 <a href="#obra" style="text-decoration: none">Obra</a>
 <a href="#gastronomia" style="text-decoration: none">Gastronomía</a>
 <a href="#blog" style="text-decoration: none">Blog</a>
-<a href="#colaborar" style="text-decoration: none; font-weight: 500; border-bottom: 1px solid #1B1C18">Colaborar</a>
+<a href="#colaborar" style="text-decoration: none; font-weight: 500; border-bottom: 1px solid #FFFFFF">Colaborar</a>
 </nav>
 </header>
+<h1 class="wordmark" style="position: absolute; left: 0; right: 0; bottom: 9vh; margin: 0; text-align: center; color: #FFFFFF; font-family: Unbounded, 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(64px, 15vw, 210px); line-height: 1; letter-spacing: 0.04em; text-shadow: 0 2px 30px rgba(0,0,0,0.25)">BORELA</h1>
+</section>
 
-<section class="hero" style="max-width: 1280px; margin: 0 auto; padding: 64px 40px 104px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 28px">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #55574F">Diseño con biomateriales · Barcelona</p>
-<h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 64px; line-height: 1.04; letter-spacing: -0.02em">Objetos, luz y arte.</h1>
-<p style="margin: 0; max-width: 520px; font-size: 18px; color: #3A3C35">Lámparas y obras que nacen de una pregunta: ¿hasta dónde puede llegar un material?</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
-<a href="#tienda" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; background: #1B1C18; color: #EEEEE8; text-decoration: none; font-weight: 500; font-size: 15px">Ver lámparas</a>
-<a href="#colaborar" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #1B1C18; text-decoration: none; font-weight: 500; font-size: 15px">Colaborar conmigo</a>
+<section id="historia">
+<div style="max-width: 1280px; margin: 0 auto; padding: 96px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: center">
+<div role="img" aria-label="Espacio para foto" style="aspect-ratio: 4 / 5; background: #D9DAD1; display: flex; align-items: flex-end; padding: 20px; box-sizing: border-box; font-size: 13px; color: #55574F">[Foto: tú en el taller o trabajando una pieza]</div>
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 520px">
+<p style="margin: 0; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #55574F">Mi historia</p>
+<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 40px; line-height: 1.1; letter-spacing: -0.01em">[Título de tu historia]</h2>
+<p style="margin: 0; font-size: 17px; color: #3A3C35">[Quién eres, cómo empezaste a trabajar con micelio, fieltro e impresión 3D, y qué buscas con cada pieza.]</p>
+<p style="margin: 0; font-size: 17px; color: #3A3C35">[Un segundo párrafo: por qué Borela, qué significa el nombre, o qué te gustaría construir.]</p>
 </div>
 </div>
-<img class="hero-img" src="fotos/ocaso-colgada.jpg" alt="Lámpara Ocaso encendida, colgada del techo" style="width: 100%; height: 620px; object-fit: cover; display: block; background: #1B1C18">
 </section>
 
 <section id="tienda" style="border-top: 1px solid #C9CABF">
@@ -180,7 +183,7 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </section>
 
 <footer style="max-width: 1280px; margin: 0 auto; padding: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 13px; color: #55574F">
-<span>© PEDRO GIL · Barcelona</span>
+<span>© Borela · Barcelona</span>
 <div style="display: flex; flex-wrap: wrap; gap: 24px">
 <a href="#" style="color: #55574F">Instagram</a>
 <a href="#" style="color: #55574F">Envíos y devoluciones</a>
