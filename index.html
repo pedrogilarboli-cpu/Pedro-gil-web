@@ -13,12 +13,16 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </style>
 <style>
 @media (max-width: 640px) {
+  header { padding-top: 16px !important; padding-bottom: 14px !important; gap: 10px !important; }
+  header nav { flex-wrap: nowrap !important; gap: 12px !important; justify-content: space-between; width: 100%; overflow-x: auto; white-space: nowrap; font-size: 15px !important; }
+  header nav a { padding: 8px 0; }
   h1 { font-size: 40px !important; }
   section > div, header, footer { padding-left: 20px !important; padding-right: 20px !important; }
-  .hero { padding: 24px 20px 72px !important; gap: 40px !important; }
-  .hero-img { height: 440px !important; }
+  .hero { padding: 0 20px 64px !important; gap: 32px !important; }
+  .hero-img { order: -1; height: 72vh !important; min-height: 420px; max-height: 640px; width: calc(100% + 40px) !important; margin: 0 -20px; }
   .hero > div { padding-left: 0 !important; padding-right: 0 !important; }
 }
+@media (max-width: 370px) { header nav { font-size: 14px !important; } }
 </style>
 </head>
 <body>

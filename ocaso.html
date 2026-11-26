@@ -13,9 +13,16 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </style>
 <style>
 @media (max-width: 640px) {
+  .crumb { padding: 4px 20px 0 !important; }
+  .prod { padding: 20px 20px 64px !important; gap: 36px !important; }
+  .prod > div { padding-left: 0 !important; padding-right: 0 !important; }
+  header { padding-top: 16px !important; padding-bottom: 14px !important; gap: 10px !important; }
+  header nav { flex-wrap: nowrap !important; gap: 12px !important; justify-content: space-between; width: 100%; overflow-x: auto; white-space: nowrap; font-size: 15px !important; }
+  header nav a { padding: 8px 0; }
   h1 { font-size: 40px !important; }
   section > div, header, footer { padding-left: 20px !important; padding-right: 20px !important; }
 }
+@media (max-width: 370px) { header nav { font-size: 14px !important; } }
 </style>
 </head>
 <body>
@@ -32,11 +39,11 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </nav>
 </header>
 
-<div style="max-width: 1280px; margin: 0 auto; padding: 8px 40px 0; font-size: 13px; color: #55574F">
+<div class="crumb" style="max-width: 1280px; margin: 0 auto; padding: 8px 40px 0; font-size: 13px; color: #55574F">
 <a href="index.html#tienda" style="color: #55574F">Tienda</a> / Lámparas / Ocaso
 </div>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 40px 40px 96px; display: flex; flex-wrap: wrap; gap: 64px">
+<section class="prod" style="max-width: 1280px; margin: 0 auto; padding: 40px 40px 96px; display: flex; flex-wrap: wrap; gap: 64px">
 <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <img src="fotos/ocaso-colgada.jpg" alt="Lámpara Ocaso encendida, colgada del techo" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; background: #1B1C18">
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
