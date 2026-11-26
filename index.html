@@ -21,7 +21,8 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
   section > div, header, footer { padding-left: 20px !important; padding-right: 20px !important; }
   .hero-full header { padding-top: 18px !important; gap: 14px !important; }
   .wordmark { font-size: 30px !important; }
-  #historia-texto p { font-size: 21px !important; }
+  #historia { height: 60svh !important; }
+  .historia-frase { font-size: 16px !important; bottom: 24px !important; }
   .hero-photo { top: 0 !important; left: 0 !important; transform: none !important; width: 100% !important; height: 100% !important; object-fit: cover; object-position: 50% 40%; -webkit-mask-image: none !important; mask-image: none !important; }
 }
 @media (max-width: 370px) { header nav { font-size: 14px !important; } }
@@ -45,16 +46,11 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </header>
 </section>
 
-<section id="historia" style="position: relative; height: 92vh; height: 92svh; min-height: 520px; overflow: hidden; background: #D9DAD1">
-<video src="video/historia.mp4" poster="fotos/historia-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Nefertiti creciendo en micelio, dentro de su molde" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; display: block"></video>
-<div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(0,0,0,0.18)"></div>
-<a href="#historia-texto" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; border: 1px solid #FFFFFF; border-radius: 999px; background: rgba(0,0,0,0.25); color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px)">Mi historia</a>
-</section>
-
-<section id="historia-texto">
-<div style="max-width: 720px; margin: 0 auto; padding: 88px 40px; text-align: center">
-<p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 26px; line-height: 1.4; color: #1B1C18">Mi pasión por la biología y por la vida es lo que me ha llevado a experimentar con distintas formas y materiales, y a llevarlos al mundo del diseño.</p>
-</div>
+<section id="historia" style="position: relative; height: 52vh; height: 52svh; min-height: 400px; overflow: hidden; background: #2A2724">
+<video src="video/historia.mp4" poster="fotos/historia-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Procesos del taller: una pieza de micelio en su molde, una impresora 3D trabajando y una pieza plegable de madera" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></video>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.2) 45%, rgba(0,0,0,0.62) 100%)"></div>
+<a href="#historia" style="position: absolute; top: 56%; left: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; min-height: 46px; padding: 0 28px; border: 1px solid rgba(255,255,255,0.9); border-radius: 999px; background: rgba(255,255,255,0.08); color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px)">Mi historia</a>
+<p class="historia-frase" style="position: absolute; left: 50%; bottom: 36px; transform: translateX(-50%); width: min(640px, calc(100% - 40px)); margin: 0; text-align: center; color: #FFFFFF; font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.45; letter-spacing: -0.005em; text-shadow: 0 1px 12px rgba(0,0,0,0.35)">La biología y la vida me llevaron a experimentar con formas y materiales. Hoy, ese experimento es mi forma de diseñar.</p>
 </section>
 
 
