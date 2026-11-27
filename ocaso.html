@@ -28,10 +28,16 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 .menu-bars{position:relative;width:24px;height:10px;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor;box-sizing:border-box;transition:transform .2s}
 .menu[open] .menu-bars{border-bottom-color:transparent;transform:translateY(4px) rotate(45deg)}
 .menu[open] .menu-bars::after{content:"";position:absolute;left:0;right:0;top:-1.5px;border-top:1.5px solid currentColor;transform:rotate(-90deg)}
-.menu-panel{position:absolute;right:0;top:calc(100% + 10px);min-width:220px;background:#EEEEE8;padding:8px 0;box-shadow:0 14px 40px rgba(0,0,0,.22);display:flex;flex-direction:column;z-index:30}
-.menu-panel a{padding:13px 24px;color:#1B1C18 !important;text-decoration:none;font-size:16px}
-.menu-panel a:hover,.menu-panel a:focus-visible{background:#E0E0D7}
-@media (max-width:640px){.menu-txt{display:none}.site-header{padding-top:16px !important;padding-bottom:14px !important}}
+.menu-panel{position:fixed;inset:0;z-index:30;background:#1B1C18;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:110px max(40px,8vw) 60px;box-sizing:border-box;overflow-y:auto;animation:menuIn .25s ease}
+@keyframes menuIn{from{opacity:0}to{opacity:1}}
+.menu-panel a{display:flex;align-items:baseline;gap:18px;padding:6px 0;color:#EEEEE8 !important;text-decoration:none;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(42px,7.5vw,96px);line-height:1.1;letter-spacing:-0.02em;transition:color .2s,transform .2s}
+.menu-panel a::before{content:attr(data-n);font-family:Inter,sans-serif;font-size:14px;font-weight:400;letter-spacing:0;color:#8C8C82;min-width:24px}
+.menu-panel a:hover,.menu-panel a:focus-visible{color:#D4DEB6 !important;transform:translateX(6px);outline:none}
+.menu[open] summary{position:relative;z-index:40;color:#FFFFFF}
+.site-header:has(.menu[open]) .wordmark{position:relative;z-index:40}
+.site-header:has(.menu[open]) .wordmark a{color:#FFFFFF}
+body.menu-abierto{overflow:hidden}
+@media (max-width:640px){.menu-panel{justify-content:flex-start;padding:140px 28px 48px}.menu-txt{display:none}.site-header{padding-top:16px !important;padding-bottom:14px !important}}
 </style>
 </head>
 <body>
@@ -43,11 +49,11 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 <details class="menu">
 <summary aria-label="Abrir menú"><span class="menu-txt">Menú</span><span class="menu-bars" aria-hidden="true"></span></summary>
 <nav class="menu-panel" aria-label="Principal">
-<a href="index.html#tienda">Tienda</a>
-<a href="index.html#obra">Obra</a>
-<a href="index.html#gastronomia">Gastronomía</a>
-<a href="index.html#blog">Blog</a>
-<a href="index.html#colaborar">Colaborar</a>
+<a data-n="01" href="index.html#tienda">Tienda</a>
+<a data-n="02" href="index.html#obra">Obra</a>
+<a data-n="03" href="index.html#gastronomia">Gastronomía</a>
+<a data-n="04" href="index.html#blog">Blog</a>
+<a data-n="05" href="index.html#colaborar">Colaborar</a>
 </nav>
 </details>
 </header>
@@ -109,6 +115,7 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 <script>
 (function () {
   var m = document.querySelector('details.menu'); if (!m) return;
+  m.addEventListener('toggle', function () { document.body.classList.toggle('menu-abierto', m.open); });
   m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.removeAttribute('open'); }); });
   document.addEventListener('click', function (e) { if (m.hasAttribute('open') && !m.contains(e.target)) m.removeAttribute('open'); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') m.removeAttribute('open'); });
