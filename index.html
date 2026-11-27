@@ -14,22 +14,17 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 </style>
 <style>
 @media (max-width: 640px) {
-  header { padding-top: 16px !important; padding-bottom: 14px !important; gap: 10px !important; }
-  header nav { flex-wrap: nowrap !important; gap: 12px !important; justify-content: space-between; width: 100%; overflow-x: auto; white-space: nowrap; font-size: 15px !important; }
-  header nav a { padding: 8px 0; }
   h1:not(.wordmark) { font-size: 40px !important; }
   section > div, header, footer { padding-left: 20px !important; padding-right: 20px !important; }
-  .hero-full header { padding-top: 18px !important; gap: 14px !important; }
   .wordmark { font-size: 30px !important; }
   #historia { height: 60svh !important; }
   .historia-frase { font-size: 16px !important; bottom: 24px !important; }
   .hero-photo { top: 0 !important; left: 0 !important; transform: none !important; width: 100% !important; height: 100% !important; object-fit: cover; object-position: 50% 40%; -webkit-mask-image: none !important; mask-image: none !important; }
 }
-@media (max-width: 370px) { header nav { font-size: 14px !important; } }
 </style>
 <style>
 .obra-abrir img{transition:opacity .2s}.obra-abrir:hover img{opacity:.9}
-.obra-abrir:focus-visible{outline:2px solid #1B1C18;outline-offset:4px}
+.obra-abrir:focus-visible{outline:2px solid #F1EBE1;outline-offset:4px}
 .obra-dialog{border:0;padding:0;margin:auto;width:min(1100px,94vw);max-height:92vh;background:#EEEEE8;color:#1B1C18;overflow:auto;font-family:Inter,system-ui,sans-serif;line-height:1.6}
 .obra-dialog::backdrop{background:rgba(15,14,12,.82)}
 .obra-contenido img{width:100%;height:auto;max-height:62vh;object-fit:contain;display:block;background:#1B1C18}
@@ -38,6 +33,19 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 body.dialog-abierto{overflow:hidden}
 @media (max-width:640px){.obra-dialog{width:100vw;max-width:100vw;max-height:100vh;height:100%}.obra-texto{padding:22px 20px 36px}.obra-contenido img{max-height:60vh}}
 </style>
+<style>
+.menu{justify-self:end;position:relative}
+.menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 2px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#1B1C18;user-select:none}
+.menu summary::-webkit-details-marker{display:none}
+.on-dark .menu summary{color:#FFFFFF}
+.menu-bars{position:relative;width:24px;height:10px;border-top:1.5px solid currentColor;border-bottom:1.5px solid currentColor;box-sizing:border-box;transition:transform .2s}
+.menu[open] .menu-bars{border-bottom-color:transparent;transform:translateY(4px) rotate(45deg)}
+.menu[open] .menu-bars::after{content:"";position:absolute;left:0;right:0;top:-1.5px;border-top:1.5px solid currentColor;transform:rotate(-90deg)}
+.menu-panel{position:absolute;right:0;top:calc(100% + 10px);min-width:220px;background:#EEEEE8;padding:8px 0;box-shadow:0 14px 40px rgba(0,0,0,.22);display:flex;flex-direction:column;z-index:30}
+.menu-panel a{padding:13px 24px;color:#1B1C18 !important;text-decoration:none;font-size:16px}
+.menu-panel a:hover,.menu-panel a:focus-visible{background:#E0E0D7}
+@media (max-width:640px){.menu-txt{display:none}.site-header{padding-top:16px !important;padding-bottom:14px !important}}
+</style>
 </head>
 <body>
 <div style="background: #EEEEE8; color: #1B1C18; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
@@ -45,15 +53,19 @@ body.dialog-abierto{overflow:hidden}
 <section class="hero-full" style="position: relative; height: 100vh; height: 100svh; min-height: 560px; overflow: hidden; background: linear-gradient(to bottom, #1C1C25 0%, #211518 55%, #352321 100%)">
 <img class="hero-photo" src="fotos/ocaso-colgada.jpg" alt="Lámpara Ocaso encendida, colgada del techo" width="1200" height="1600" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -47%); height: 160%; width: auto; max-width: none; display: block; -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%)">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 58%, rgba(0,0,0,0.5) 100%)"></div>
-<header class="on-dark" style="position: absolute; top: 0; left: 0; right: 0; max-width: 1280px; margin: 0 auto; padding: 28px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
-<h1 class="wordmark" style="margin: 0; font-family: Unbounded, 'Inter Tight', sans-serif; font-weight: 500; font-size: 40px; line-height: 1; letter-spacing: 0.04em"><a href="index.html" style="text-decoration: none">BORELA</a></h1>
-<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 14px">
-<a href="#tienda" style="text-decoration: none">Tienda</a>
-<a href="#obra" style="text-decoration: none">Obra</a>
-<a href="#gastronomia" style="text-decoration: none">Gastronomía</a>
-<a href="#blog" style="text-decoration: none">Blog</a>
-<a href="#colaborar" style="text-decoration: none; font-weight: 500; border-bottom: 1px solid #FFFFFF">Colaborar</a>
+<header class="site-header on-dark" style="position: absolute; top: 0; left: 0; right: 0; z-index: 10; max-width: 1280px; margin: 0 auto; padding: 24px 40px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px">
+<span aria-hidden="true"></span>
+<h1 class="wordmark" style="margin: 0; justify-self: center; font-family: Unbounded, 'Inter Tight', sans-serif; font-weight: 500; font-size: 40px; line-height: 1; letter-spacing: 0.04em"><a href="index.html" style="text-decoration: none">BORELA</a></h1>
+<details class="menu">
+<summary aria-label="Abrir menú"><span class="menu-txt">Menú</span><span class="menu-bars" aria-hidden="true"></span></summary>
+<nav class="menu-panel" aria-label="Principal">
+<a href="#tienda">Tienda</a>
+<a href="#obra">Obra</a>
+<a href="#gastronomia">Gastronomía</a>
+<a href="#blog">Blog</a>
+<a href="#colaborar">Colaborar</a>
 </nav>
+</details>
 </header>
 </section>
 
@@ -65,8 +77,8 @@ body.dialog-abierto{overflow:hidden}
 </section>
 
 
-<section id="tienda" style="border-top: 1px solid #C9CABF">
-<div style="max-width: 1280px; margin: 0 auto; padding: 88px 40px; display: flex; flex-direction: column; gap: 40px">
+<section id="tienda">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 40px 72px; display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px">
 <div style="display: flex; gap: 20px; align-items: baseline">
 <span style="font-size: 13px; color: #55574F">01</span>
@@ -109,23 +121,23 @@ body.dialog-abierto{overflow:hidden}
 </div>
 </section>
 
-<section id="obra" style="border-top: 1px solid #C9CABF">
-<div style="max-width: 1280px; margin: 0 auto; padding: 88px 40px; display: flex; flex-direction: column; gap: 40px">
+<section id="obra" style="background: #3A2E25; color: #F1EBE1">
+<div style="max-width: 1280px; margin: 0 auto; padding: 64px 40px 72px; display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; flex-direction: column; gap: 16px">
 <div style="display: flex; gap: 20px; align-items: baseline">
-<span style="font-size: 13px; color: #55574F">02</span>
+<span style="font-size: 13px; color: #C9BBA8">02</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">Obra</h2>
 </div>
-<p style="margin: 0; max-width: 420px; color: #3A3C35">Obras de arte experimentales.</p>
+<p style="margin: 0; max-width: 420px; color: #E4DACB">Obras de arte experimentales.</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: start">
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
 <button type="button" class="obra-abrir" data-obra="obra-grifo" aria-label="Ver Grifo en grande" style="all: unset; display: block; width: 100%; cursor: zoom-in"><img src="fotos/grifo-obra.jpg" alt="Grifo: un grifo rojo recortado en fieltro sobre fondo oscuro, en un marco de madera, sostenido a contraluz contra el cielo" loading="lazy" width="1800" height="1358" style="width: 100%; height: auto; display: block; background: #8FB3D9"></button>
 <figcaption style="display: flex; flex-direction: column; gap: 14px">
-<span style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline"><span style="font-weight: 500">Grifo</span><span style="font-size: 14px; color: #55574F">Fieltro</span></span>
-<span style="display: flex; gap: 14px; align-items: center; padding-top: 14px; border-top: 1px solid #C9CABF">
+<span style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline"><span style="font-weight: 500">Grifo</span><span style="font-size: 14px; color: #C9BBA8">Fieltro</span></span>
+<span style="display: flex; gap: 14px; align-items: center; padding-top: 14px; border-top: 1px solid rgba(241,235,225,0.22)">
 <img src="fotos/grifo-referencia.jpg" alt="Pintura mural románica de un grifo junto a un árbol" loading="lazy" width="1400" height="747" style="width: 120px; height: auto; display: block; flex-shrink: 0">
-<span style="font-size: 14px; color: #3A3C35">Inspirado en una pintura mural románica.</span>
+<span style="font-size: 14px; color: #E4DACB">Inspirado en una pintura mural románica.</span>
 </span>
 </figcaption>
 </figure>
@@ -161,11 +173,11 @@ body.dialog-abierto{overflow:hidden}
 </dialog>
 
 
-<section style="border-top: 1px solid #C9CABF">
-<div style="max-width: 1280px; margin: 0 auto; padding: 88px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px">
+<section id="cocina-blog" style="background: #D4DEB6">
+<div style="max-width: 1280px; margin: 0 auto; padding: 64px 40px 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px">
 <div id="gastronomia" style="display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; gap: 20px; align-items: baseline">
-<span style="font-size: 13px; color: #55574F">03</span>
+<span style="font-size: 13px; color: #4A4D43">03</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">Gastronomía</h2>
 </div>
 <a href="receta-calabaza.html" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none">
@@ -174,29 +186,29 @@ body.dialog-abierto{overflow:hidden}
 </a>
 <p style="margin: 0; color: #3A3C35">Cocina y microorganismos: la misma curiosidad que lleva al micelio lleva a la fermentación.</p>
 <div style="display: flex; flex-direction: column">
-<a href="#gastronomia" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-top: 1px solid #C9CABF; text-decoration: none"><span style="font-weight: 500">Fermentaciones</span><span style="font-size: 14px; color: #55574F">[Recetas y procesos] →</span></a>
-<a href="receta-calabaza.html" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-top: 1px solid #C9CABF; text-decoration: none"><span style="font-weight: 500">Calabaza asada con hummus de alubia blanca</span><span style="font-size: 14px; color: #55574F">Receta →</span></a>
-<a href="receta-aji-de-gallina.html" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-top: 1px solid #C9CABF; border-bottom: 1px solid #C9CABF; text-decoration: none"><span style="font-weight: 500">Ají de gallina peruano</span><span style="font-size: 14px; color: #55574F">Receta →</span></a>
+<a href="#gastronomia" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(27,28,24,0.18); text-decoration: none"><span style="font-weight: 500">Fermentaciones</span><span style="font-size: 14px; color: #4A4D43">[Recetas y procesos] →</span></a>
+<a href="receta-calabaza.html" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(27,28,24,0.18); text-decoration: none"><span style="font-weight: 500">Calabaza asada con hummus de alubia blanca</span><span style="font-size: 14px; color: #4A4D43">Receta →</span></a>
+<a href="receta-aji-de-gallina.html" style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(27,28,24,0.18); border-bottom: 1px solid rgba(27,28,24,0.18); text-decoration: none"><span style="font-weight: 500">Ají de gallina peruano</span><span style="font-size: 14px; color: #4A4D43">Receta →</span></a>
 </div>
 </div>
 <div id="blog" style="display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; gap: 20px; align-items: baseline">
-<span style="font-size: 13px; color: #55574F">04</span>
+<span style="font-size: 13px; color: #4A4D43">04</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">Blog</h2>
 </div>
 
-<a href="#blog" style="display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-top: 1px solid #C9CABF; text-decoration: none">
-<span style="font-size: 13px; color: #55574F">[FECHA] · Proceso</span>
+<a href="#blog" style="display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-top: 1px solid rgba(27,28,24,0.18); text-decoration: none">
+<span style="font-size: 13px; color: #4A4D43">[FECHA] · Proceso</span>
 <span style="font-size: 19px; font-family: 'Inter Tight', sans-serif">[Título de entrada 01]</span>
 </a>
 
-<a href="#blog" style="display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-top: 1px solid #C9CABF; text-decoration: none">
-<span style="font-size: 13px; color: #55574F">[FECHA] · Materiales</span>
+<a href="#blog" style="display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-top: 1px solid rgba(27,28,24,0.18); text-decoration: none">
+<span style="font-size: 13px; color: #4A4D43">[FECHA] · Materiales</span>
 <span style="font-size: 19px; font-family: 'Inter Tight', sans-serif">[Título de entrada 02]</span>
 </a>
 
-<a href="#blog" style="display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-top: 1px solid #C9CABF; text-decoration: none">
-<span style="font-size: 13px; color: #55574F">[FECHA] · Cocina</span>
+<a href="#blog" style="display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-top: 1px solid rgba(27,28,24,0.18); text-decoration: none">
+<span style="font-size: 13px; color: #4A4D43">[FECHA] · Cocina</span>
 <span style="font-size: 19px; font-family: 'Inter Tight', sans-serif">[Título de entrada 03]</span>
 </a>
 
@@ -267,6 +279,14 @@ body.dialog-abierto{overflow:hidden}
     d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
     d.addEventListener('close', function () { document.body.classList.remove('dialog-abierto'); });
   });
+})();
+</script>
+<script>
+(function () {
+  var m = document.querySelector('details.menu'); if (!m) return;
+  m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.removeAttribute('open'); }); });
+  document.addEventListener('click', function (e) { if (m.hasAttribute('open') && !m.contains(e.target)) m.removeAttribute('open'); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') m.removeAttribute('open'); });
 })();
 </script>
 </body>
