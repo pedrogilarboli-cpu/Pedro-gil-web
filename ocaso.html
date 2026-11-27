@@ -30,8 +30,7 @@ a{color:#1B1C18}a:hover{color:#4F5D3A}
 .menu[open] .menu-bars::after{content:"";position:absolute;left:0;right:0;top:-1.5px;border-top:1.5px solid currentColor;transform:rotate(-90deg)}
 .menu-panel{position:fixed;inset:0;z-index:30;background:#1B1C18;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:110px max(40px,8vw) 60px;box-sizing:border-box;overflow-y:auto;animation:menuIn .25s ease}
 @keyframes menuIn{from{opacity:0}to{opacity:1}}
-.menu-panel a{display:flex;align-items:baseline;gap:18px;padding:6px 0;color:#EEEEE8 !important;text-decoration:none;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(42px,7.5vw,96px);line-height:1.1;letter-spacing:-0.02em;transition:color .2s,transform .2s}
-.menu-panel a::before{content:attr(data-n);font-family:Inter,sans-serif;font-size:14px;font-weight:400;letter-spacing:0;color:#8C8C82;min-width:24px}
+.menu-panel a{display:block;padding:6px 0;color:#EEEEE8 !important;text-decoration:none;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(42px,7.5vw,96px);line-height:1.1;letter-spacing:-0.02em;transition:color .2s,transform .2s}
 .menu-panel a:hover,.menu-panel a:focus-visible{color:#D4DEB6 !important;transform:translateX(6px);outline:none}
 .menu[open] summary{position:relative;z-index:40;color:#FFFFFF}
 .site-header:has(.menu[open]) .wordmark{position:relative;z-index:40}
@@ -49,11 +48,11 @@ body.menu-abierto{overflow:hidden}
 <details class="menu">
 <summary aria-label="Abrir menú"><span class="menu-txt">Menú</span><span class="menu-bars" aria-hidden="true"></span></summary>
 <nav class="menu-panel" aria-label="Principal">
-<a data-n="01" href="index.html#tienda">Tienda</a>
-<a data-n="02" href="index.html#obra">Obra</a>
-<a data-n="03" href="index.html#gastronomia">Gastronomía</a>
-<a data-n="04" href="index.html#blog">Blog</a>
-<a data-n="05" href="index.html#colaborar">Colaborar</a>
+<a href="index.html#tienda">Tienda</a>
+<a href="index.html#obra">Obra</a>
+<a href="index.html#gastronomia">Gastronomía</a>
+<a href="index.html#blog">Blog</a>
+<a href="index.html#colaborar">Colaborar</a>
 </nav>
 </details>
 </header>

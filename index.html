@@ -43,8 +43,7 @@ body.dialog-abierto{overflow:hidden}
 .menu[open] .menu-bars::after{content:"";position:absolute;left:0;right:0;top:-1.5px;border-top:1.5px solid currentColor;transform:rotate(-90deg)}
 .menu-panel{position:fixed;inset:0;z-index:30;background:#1B1C18;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:110px max(40px,8vw) 60px;box-sizing:border-box;overflow-y:auto;animation:menuIn .25s ease}
 @keyframes menuIn{from{opacity:0}to{opacity:1}}
-.menu-panel a{display:flex;align-items:baseline;gap:18px;padding:6px 0;color:#EEEEE8 !important;text-decoration:none;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(42px,7.5vw,96px);line-height:1.1;letter-spacing:-0.02em;transition:color .2s,transform .2s}
-.menu-panel a::before{content:attr(data-n);font-family:Inter,sans-serif;font-size:14px;font-weight:400;letter-spacing:0;color:#8C8C82;min-width:24px}
+.menu-panel a{display:block;padding:6px 0;color:#EEEEE8 !important;text-decoration:none;font-family:'Inter Tight',sans-serif;font-weight:500;font-size:clamp(42px,7.5vw,96px);line-height:1.1;letter-spacing:-0.02em;transition:color .2s,transform .2s}
 .menu-panel a:hover,.menu-panel a:focus-visible{color:#D4DEB6 !important;transform:translateX(6px);outline:none}
 .menu[open] summary{position:relative;z-index:40;color:#FFFFFF}
 .site-header:has(.menu[open]) .wordmark{position:relative;z-index:40}
@@ -65,11 +64,11 @@ body.menu-abierto{overflow:hidden}
 <details class="menu">
 <summary aria-label="Abrir menú"><span class="menu-txt">Menú</span><span class="menu-bars" aria-hidden="true"></span></summary>
 <nav class="menu-panel" aria-label="Principal">
-<a data-n="01" href="#tienda">Tienda</a>
-<a data-n="02" href="#obra">Obra</a>
-<a data-n="03" href="#gastronomia">Gastronomía</a>
-<a data-n="04" href="#blog">Blog</a>
-<a data-n="05" href="#colaborar">Colaborar</a>
+<a href="#tienda">Tienda</a>
+<a href="#obra">Obra</a>
+<a href="#gastronomia">Gastronomía</a>
+<a href="#blog">Blog</a>
+<a href="#colaborar">Colaborar</a>
 </nav>
 </details>
 </header>
@@ -87,7 +86,6 @@ body.menu-abierto{overflow:hidden}
 <div style="max-width: 1280px; margin: 0 auto; padding: 48px 40px 72px; display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px">
 <div style="display: flex; gap: 20px; align-items: baseline">
-<span style="font-size: 13px; color: #55574F">01</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">Lámparas</h2>
 </div>
 <a href="#tienda" style="font-size: 14px">Ver toda la tienda →</a>
@@ -131,7 +129,6 @@ body.menu-abierto{overflow:hidden}
 <div style="max-width: 1280px; margin: 0 auto; padding: 64px 40px 72px; display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; flex-direction: column; gap: 16px">
 <div style="display: flex; gap: 20px; align-items: baseline">
-<span style="font-size: 13px; color: #C9BBA8">02</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">Obra</h2>
 </div>
 <p style="margin: 0; max-width: 420px; color: #E4DACB">Obras de arte experimentales.</p>
@@ -141,10 +138,6 @@ body.menu-abierto{overflow:hidden}
 <button type="button" class="obra-abrir" data-obra="obra-grifo" aria-label="Ver Grifo en grande" style="all: unset; display: block; width: 100%; cursor: zoom-in"><img src="fotos/grifo-obra.jpg" alt="Grifo: un grifo rojo recortado en fieltro sobre fondo oscuro, en un marco de madera, sostenido a contraluz contra el cielo" loading="lazy" width="1800" height="1358" style="width: 100%; height: auto; display: block; background: #8FB3D9"></button>
 <figcaption style="display: flex; flex-direction: column; gap: 14px">
 <span style="display: flex; justify-content: space-between; gap: 12px; align-items: baseline"><span style="font-weight: 500">Grifo</span><span style="font-size: 14px; color: #C9BBA8">Fieltro</span></span>
-<span style="display: flex; gap: 14px; align-items: center; padding-top: 14px; border-top: 1px solid rgba(241,235,225,0.22)">
-<img src="fotos/grifo-referencia.jpg" alt="Pintura mural románica de un grifo junto a un árbol" loading="lazy" width="1400" height="747" style="width: 120px; height: auto; display: block; flex-shrink: 0">
-<span style="font-size: 14px; color: #E4DACB">Inspirado en una pintura mural románica.</span>
-</span>
 </figcaption>
 </figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
@@ -172,7 +165,10 @@ body.menu-abierto{overflow:hidden}
 <img src="fotos/grifo-obra.jpg" alt="Grifo: un grifo rojo recortado en fieltro sobre fondo oscuro, en un marco de madera, a contraluz" width="1800" height="1358" loading="lazy">
 <div class="obra-texto">
 <div style="display: flex; justify-content: space-between; gap: 16px; align-items: baseline; flex-wrap: wrap"><h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 30px; letter-spacing: -0.01em">Grifo</h3><span style="font-size: 14px; color: #55574F">Fieltro</span></div>
-<p style="margin: 0">Inspirado en una pintura mural románica.</p>
+<figure style="margin: 6px 0 4px; display: flex; flex-direction: column; gap: 8px">
+<img src="fotos/grifo-referencia.jpg" alt="Pintura mural románica de un grifo junto a un árbol" width="1400" height="747" loading="lazy" style="width: 100%; max-width: 560px; height: auto; max-height: none; display: block; background: #C9A67A">
+<figcaption style="font-size: 14px; color: #55574F">Inspirado en una pintura mural románica.</figcaption>
+</figure>
 <p style="margin: 0">[Texto sobre la obra: cómo surgió, cómo está hecha y qué significa para ti.]</p>
 </div>
 </div>
@@ -183,7 +179,6 @@ body.menu-abierto{overflow:hidden}
 <div style="max-width: 1280px; margin: 0 auto; padding: 64px 40px 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px">
 <div id="gastronomia" style="display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; gap: 20px; align-items: baseline">
-<span style="font-size: 13px; color: #4A4D43">03</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">Gastronomía</h2>
 </div>
 <a href="receta-calabaza.html" style="display: flex; flex-direction: column; gap: 12px; text-decoration: none">
@@ -199,7 +194,6 @@ body.menu-abierto{overflow:hidden}
 </div>
 <div id="blog" style="display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; gap: 20px; align-items: baseline">
-<span style="font-size: 13px; color: #4A4D43">04</span>
 <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 36px; letter-spacing: -0.01em">Blog</h2>
 </div>
 
